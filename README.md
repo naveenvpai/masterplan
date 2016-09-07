@@ -1,1 +1,1 @@
-Masterplan: a web app that helps students manage their schedules
+Masterplan: an app to help students manage their schedules.
