@@ -1,4 +1,11 @@
 class User < ApplicationRecord
-  validates :name, length: {maximum: 140}, presence: true
-  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }, presence:true
+  validates :name, 
+    length: {maximum: 50}, 
+    presence: true
+    
+  EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i  
+  validates :email, 
+    format: { with: EMAIL_REGEX }, 
+    presence:true, 
+    length: {maximum: 255}
 end
