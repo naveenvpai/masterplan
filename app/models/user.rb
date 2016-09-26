@@ -8,5 +8,5 @@ class User < ApplicationRecord
     format: { with: EMAIL_REGEX }, 
     presence:true, 
     length: {maximum: 255},
-    uniqueness: true
+    uniqueness: { case_sensitive: false }
 end
