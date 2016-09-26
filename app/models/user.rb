@@ -7,5 +7,6 @@ class User < ApplicationRecord
   validates :email, 
     format: { with: EMAIL_REGEX }, 
     presence:true, 
-    length: {maximum: 255}
+    length: {maximum: 255},
+    uniqueness: true
 end
