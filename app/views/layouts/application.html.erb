@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <%= link_to "Home", root_path %>
+    <br/> 
+    <% flash.each do |message_type, message| %>
+      <div class="alert-<%= message_type %>"><%= message %></div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
