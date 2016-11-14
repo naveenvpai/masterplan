@@ -1,9 +1,10 @@
 <%= provide(:title, "Welcome")%>
 <h1>Welcome to Masterplan</h1>
-<p>
-<% if logged_in %> 
-<%= link_to "Signup", signup_path %> 
-<% end %> or </p>
-<% if logged_in %> 
-<%= link_to "Signup", signup_path %> 
-<%= if logged_in? link_to "Log in", login_path %></p>
+  <p>
+  <% if logged_in? %> 
+    <%= link_to "Logout", logout_path, method:"delete" %> 
+  <% else %>
+    <%= link_to "Signup", signup_path %> or 
+    <%= link_to "Log in", login_path %>
+  <% end %>
+  </p>
