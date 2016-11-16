@@ -121,7 +121,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (11.3.0)
-    rb-fsevent (0.9.7)
+    rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     refining (0.0.5.5)
@@ -175,6 +175,7 @@ DEPENDENCIES
   byebug (= 9.0.0)
   call-me
   coffee-rails (= 4.2.1)
+  ffi
   ffi-extra
   ffi-inline
   iso-639
