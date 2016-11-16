@@ -7,7 +7,6 @@ gem 'call-me'
 gem 'ffi-extra'
 gem 'ffi-inline'
 gem 'iso-639'
-gem 'puma',         '3.4.0'
 gem 'sass-rails',   '5.0.6'
 gem 'uglifier',     '3.0.0'
 gem 'coffee-rails', '4.2.1'
@@ -17,6 +16,7 @@ gem 'jbuilder',     '2.4.1'
 gem 'rails-controller-testing'
 
 group :development, :test do
+  gem 'puma',         '3.4.0'
   gem 'sqlite3', '1.3.11'
   gem 'byebug',  '9.0.0', platform: :mri
 end
