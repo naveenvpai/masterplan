@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails',        '5.0.0.1'
 gem 'bcrypt',       '3.1.11'
-gem 'tesseract-ocr'
 gem 'call-me'
 gem 'ffi-extra'
 gem 'ffi-inline'
@@ -16,6 +15,7 @@ gem 'jbuilder',     '2.4.1'
 gem 'rails-controller-testing'
 
 group :development, :test do
+  gem 'tesseract-ocr'
   gem 'puma',         '3.4.0'
   gem 'sqlite3', '1.3.11'
   gem 'byebug',  '9.0.0', platform: :mri
