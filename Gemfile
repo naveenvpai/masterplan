@@ -14,6 +14,7 @@ gem 'jquery-rails', '4.1.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
 gem 'rails-controller-testing'
+gem "paperclip", "~> 4.2"
 
 group :development, :test do
   gem 'tesseract-ocr'
