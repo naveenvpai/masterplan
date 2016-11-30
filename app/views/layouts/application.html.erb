@@ -10,6 +10,9 @@
 
   <body>
     <%= link_to "Home", root_path %>
+    <% if logged_in? %>
+      | <%= link_to " "+current_user.name, current_user %>
+    <% end %>
     <br/> 
     <% flash.each do |message_type, message| %>
       <div class="alert-<%= message_type %>"><%= message %></div>
