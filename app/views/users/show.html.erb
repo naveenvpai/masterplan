@@ -1,4 +1,6 @@
 <%= provide(:title, @user.name) %>
 <h1><%= @user.name %></h1>
 <p><i><%= @user.email %></i></p>
-<%= link_to 'Add photo', 'http://www.google.com' %>
+<%= link_to 'Add photo', new_photo_path %>
+<br/>
+<%= render @photos %>

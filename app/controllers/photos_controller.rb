@@ -4,17 +4,27 @@ class PhotosController < ApplicationController
   end
 
   def new
-    @photo = Photo.new
+    if logged_in?
+      @photo = Photo.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
-    @photo = Photo.new(photo_params)
+    @photo = current_user.photos.build(photo_params)
     if @photo.save
       flash[:success] = "The photo was added!"
-      redirect_to root_path
+      redirect_to current_user
     else
       render 'new'
     end
+  end
+
+  def destroy
+    Photo.find(params[:id]).destroy
+    flash[:success] = "Photo deleted"
+    redirect_to current_user
   end
 
   private
@@ -22,4 +32,5 @@ class PhotosController < ApplicationController
   def photo_params
     params.require(:photo).permit(:image, :title)
   end
+
 end

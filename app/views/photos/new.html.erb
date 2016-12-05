@@ -1,0 +1,11 @@
+<h1><%= current_user.name+"'s New Photo" %></h1> 
+<%= form_for @photo do |f| %>
+  <%= render 'shared/errors', object: @photo %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control' %>
+
+  <%= f.label :image %>
+  <%= f.file_field :image, class: 'form-control'%>
+
+  <%= f.submit 'Upload', class: 'btn btn-primary' %>
+<% end %>

@@ -1,0 +1,5 @@
+<h2><%= photo.title %></h2>
+ <%= link_to "delete", photo, method: :delete,
+                                        data: { confirm: "You sure?" } %>
+<br/>
+<%= link_to image_tag(photo.image.url, class: 'media-object'), photo.image.url, target: '_blank' %>
