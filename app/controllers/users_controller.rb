@@ -6,7 +6,9 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:show];
   before_action :correct_user, only: [:show];
 
-  #This method is automatically called to create a global variable to be used by the controller's view. 
+  #This method is automatically when the user goes to the signup page. 
+  #It creates a global variable to be populated by the form in the corresponding view.
+  #The data is validated and written to the database in the create method.
   def new
     @user = User.new
   end
