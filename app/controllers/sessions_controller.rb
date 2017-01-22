@@ -6,10 +6,11 @@ More related functionality can be found in app/helpers/sessions_helper.rb
 '''
 
 class SessionsController < ApplicationController
+  #This method specifies that the Session model requires a 'new' action corresponding to a log in page.
   def new
   end
 
-  #This is called when the user attemps login
+  #This is called when the user submits the log in form.
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
