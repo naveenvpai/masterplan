@@ -1,3 +1,8 @@
+'''
+This class defines the user flow for creating and managing images. 
+It accesses params, a map of client side parameters, to access the same photo data across different pages.
+It also changes a globally defined page view, flash, to notify the user of changes.
+'''
 class PhotosController < ApplicationController
   def index
     @photos = Photo.order('created_at')
