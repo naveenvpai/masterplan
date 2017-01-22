@@ -8,6 +8,7 @@ class PhotosController < ApplicationController
     @photos = Photo.order('created_at')
   end
 
+  #This method is called when the user clicks on 'Add photo'. The create method is called when the form is submitted.
   def new
     if logged_in?
       @photo = Photo.new
