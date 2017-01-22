@@ -1,7 +1,15 @@
+'''
+This class facilitates the session info for login/logout which is stored in a global variable, params, representing a client side map.
+Flash is globally defined variable representing a page view for displaying temporary messages to users. 
+Note that the session cookie is automatically destroyed upon browser quit, which is when the session ends.
+More related functionality can be found in app/helpers/sessions_helper.rb
+'''
+
 class SessionsController < ApplicationController
   def new
   end
 
+  #This is called when the user attemps login
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
@@ -14,6 +22,7 @@ class SessionsController < ApplicationController
     end 
   end
 
+  #This is called when the user manually logs out
   def destroy 
     log_out
     redirect_to root_url
