@@ -18,8 +18,9 @@ User validation is handled in app/controllers/users_controller.rb, while session
 
 The database schema and migration history can be found in the db directory.
 
+Credits:
 
-
-
+https://www.railstutorial.org/
+https://www.sitepoint.com/uploading-files-with-paperclip/
 
 
