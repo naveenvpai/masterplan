@@ -3,6 +3,8 @@ This class provides functionality for viewing or creating a user profile.
 Its methods are automatically called upon signup (create) and login (show).
 '''
 class UsersController < ApplicationController
+  #This dictates which methods are to be called before a user profile can be loaded 
+  #(ensuring a user can't view another user's account).
   before_action :logged_in_user, only: [:show];
   before_action :correct_user, only: [:show];
 
