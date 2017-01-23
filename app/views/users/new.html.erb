@@ -2,22 +2,24 @@
 <h1>Sign up!</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user, url: signup_path) do |html_generator| %>
+    
+    #Generates a form corresponding to a certain user and submit url, then passes it into the block so it can generate html elements
+    <%= form_for(@user, url: signup_path) do |user_form| %>
       <%= render 'shared/error_messages' %>
       
-      <%= html_generator.label :name %>
-      <%= html_generator.text_field :name, class: 'form-control' %>
+      <%= user_form.label :name %>
+      <%= user_form.text_field :name, class: 'form-control' %>
       
-      <%= html_generator.label :email %>
-      <%= html_generator.email_field :email, class: 'form-control' %>
+      <%= user_form.label :email %>
+      <%= user_form.email_field :email, class: 'form-control' %>
       
-      <%= html_generator.label :password %>
-      <%= html_generator.password_field :password, class: 'form-control' %>
+      <%= user_form.label :password %>
+      <%= user_form.password_field :password, class: 'form-control' %>
       
-      <%= html_generator.label :password_confirmation, "Confirmation" %>
-      <%= html_generator.password_field :password_confirmation, class: 'form-control' %>
+      <%= user_form.label :password_confirmation, "Confirmation" %>
+      <%= user_form.password_field :password_confirmation, class: 'form-control' %>
       
-      <%= html_generator.submit "Create my account", class: "btn btn-primary" %>
+      <%= user_form.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
