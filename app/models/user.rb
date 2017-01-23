@@ -23,7 +23,7 @@ class User < ApplicationRecord
   has_secure_password
 
   def User.digest(string) 
-    #Use the default cost unless a less complex hash is specified as a system property
+    #Use the default time cost unless a less complex hash is specified as a system property
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
